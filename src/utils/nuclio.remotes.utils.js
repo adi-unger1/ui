@@ -36,10 +36,10 @@ const ensureNuclioRemote = async () => {
    * If it's just the domain, append the required prefix.
    */
 
-  // TODO: Automate URL resolution (Local: remove suffix | Prod: append it)
+// TODO: Automate URL resolution (Local: remove suffix | Prod: append it)
   if (!remoteEntryUrl.includes('/nuclio-ui')) {
-    // remoteEntryUrl = remoteEntryUrl.replace(/\/$/, ''); // Uncomment for Local
-    remoteEntryUrl = `${remoteEntryUrl.replace(/\/$/, '')}/nuclio-ui`
+    remoteEntryUrl = remoteEntryUrl.replace(/\/$/, '') // Local run
+    // remoteEntryUrl = `${remoteEntryUrl.replace(/\/$/, '')}/nuclio-ui`
   }
 
   registerPromise = (async () => {
